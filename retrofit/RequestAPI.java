@@ -1,0 +1,19 @@
+package com.setting.RetrofitApiCall;
+
+import com.setting.commonPojo.LoginRequest;
+import com.setting.commonPojo.LoginResponse;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+
+/**
+ * Created by Home on 02-Feb-18.
+ */
+
+public interface RequestAPI {
+    String key = "/Key";
+
+    @POST(key)
+    Call<LoginResponse> postLoginRequest(@Body LoginRequest request);
+}
